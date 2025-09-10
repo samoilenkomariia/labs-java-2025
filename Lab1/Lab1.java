@@ -1,5 +1,7 @@
 import java.util.Scanner;
-
+// 7.
+//Серед простих чисел, які не перевищують заданий n, знайти таке, в двійковій формі
+//якого максимальна кількість нулів.
 public class Lab1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -24,18 +26,17 @@ public class Lab1 {
     }
 
     public static boolean isSimple(int num) {
-        if (num <= 1) {
-            return false;
-        }
-        return switch(num) {
-            case 2,3,5,7 -> true;
-            default -> {
-                if (num % 2 == 0 || num % 3 ==0 || num % 5 == 0 || num % 7 == 0) {
-                    yield false;
-                }
-                yield true;
+        if (num <= 1) return false;
+        if (num == 2) return true;
+        if (num % 2 == 0) return false;
+
+        int sqrt = (int) Math.sqrt(num);
+        for (int i = 3; i <= sqrt; i+=2) {
+            if (num % i == 0) {
+                return false;
             }
-        };
+        }
+        return true;
     }
 
     public static int countZerosInStr(String str) {
