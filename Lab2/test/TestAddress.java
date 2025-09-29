@@ -8,6 +8,9 @@ public class TestAddress {
         addr.setRegion("київська обл.");
         assert addr.toString().contains("Київська обл.");
 
+        addr.setRegion("АР крим");
+        assert addr.toString().contains("АР Крим");
+
         addr.setDistrict("броварський р-н");
         assert addr.toString().contains("Броварський р-н");
 
