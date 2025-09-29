@@ -51,7 +51,7 @@ public class Main {
         ));
         while (true) {
             if (!data.get("lastname")) {
-                System.out.println("Введіть прізвище у форматі Іванов / Коваленк о-Петренко:");
+                System.out.println("Введіть прізвище у форматі Іванов / Коваленко-Петренко");
                 String input = inputSupplier.get().trim();
                 if (input.equals("3")) {
                     return null;
@@ -60,12 +60,12 @@ public class Main {
                     record.setLastName(input);
                     data.put("lastname", true);
                 } else {
-                    System.out.println("Некоректне прізвище!");
+                    System.out.println("Некоректний формат прізвища!");
                     continue;
                 }
             }
             if (!data.get("firstname")) {
-                System.out.println("Введіть ім'я у форматі Іван / Петро:");
+                System.out.println("Введіть ім'я у форматі Іван / Марія-Анна");
                 String input = inputSupplier.get().trim();
                 if (input.equals("3")) {
                     return null;
@@ -74,12 +74,12 @@ public class Main {
                     record.setFirstName(input);
                     data.put("firstname", true);
                 } else {
-                    System.out.println("Некоректне ім'я!");
+                    System.out.println("Некоректне формат імені!");
                     continue;
                 }
             }
             if (!data.get("dob")) {
-                System.out.println("Веддіть дату народження у форматі 01.01.2000:");
+                System.out.println("Веддіть дату народження у форматі 01.01.2000");
                 String input = inputSupplier.get().trim();
                 if (input.equals("3")) {
                     return null;
@@ -88,12 +88,12 @@ public class Main {
                     record.setDob(LocalDate.parse(input, DateTimeFormatter.ofPattern("dd.MM.yyyy")));
                     data.put("dob", true);
                 } else {
-                    System.out.println("Некоректна дата");
+                    System.out.println("Некоректний формат дати");
                     continue;
                 }
             }
             if (!data.get("phoneNum")) {
-                System.out.println("Введіть номер телефону у форматі 380XXXXXXXXX:");
+                System.out.println("Введіть номер телефону у форматі 380XXXXXXXXX");
                 String input = inputSupplier.get().trim();
                 if (input.equals("3")) {
                     return null;
@@ -107,7 +107,7 @@ public class Main {
                 }
             }
             if (!data.get("region")) {
-                System.out.println("Введіть область у форматі Київська обл.:");
+                System.out.println("Введіть область у форматі Київська обл./область, АР Крим");
                 String input = inputSupplier.get().trim();
                 if (input.equals("3")) {
                     return null;
@@ -121,7 +121,7 @@ public class Main {
                 }
             }
             if (!data.get("district")) {
-                System.out.println("Введіть район у форматі Обухівський р-н:");
+                System.out.println("Введіть район у форматі Обухівський р-н/район");
                 String input = inputSupplier.get().trim();
                 if (input.equals("3")) {
                     return null;
@@ -135,7 +135,7 @@ public class Main {
                 }
             }
             if (!data.get("locality")) {
-                System.out.println("Введіть населений пункт у форматі м. Київ / с. Петропавлівська Борщагівка:");
+                System.out.println("Введіть населений пункт у форматі м. Київ / с. Петропавлівська Борщагівка / смт. / с-ще");
                 String input = inputSupplier.get().trim();
                 if (input.equals("3")) {
                     return null;
@@ -149,7 +149,7 @@ public class Main {
                 }
             }
             if (!data.get("street")) {
-                System.out.println("Введіть вулицю у форматі вул. Шевченка / просп. Перемоги:");
+                System.out.println("Введіть вулицю у форматі вул./вулиця Шевченка / просп. Перемоги / бул. / пл. / майдан / пров. / шосе");
                 String input = inputSupplier.get().trim();
                 if (input.equals("3")) {
                     return null;
@@ -163,7 +163,7 @@ public class Main {
                 }
             }
             if (!data.get("house")) {
-                System.out.println("Введіть будинок у форматі буд. 1 / буд. 12-А:");
+                System.out.println("Введіть будинок у форматі буд. 1 / буд. 12-А / буд. 12/1 / буд. 12-Б/3:");
                 String input = inputSupplier.get().trim();
                 if (input.equals("3")) {
                     return null;
@@ -177,7 +177,7 @@ public class Main {
                 }
             }
             if (!data.get("apartment")) {
-                System.out.println("Введіть квартиру у форматі кв. 1 / кв. 12 (або пропустіть цей крок, натиснувши Enter):");
+                System.out.println("Введіть квартиру у форматі кв. 1 / кв. 56А / кв.90/1 / кв. 12-В/3 (або пропустіть цей крок, натиснувши Enter):");
                 String input = inputSupplier.get();
                 if (input.equals("3")) {
                     return null;

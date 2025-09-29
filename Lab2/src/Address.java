@@ -8,7 +8,8 @@ public class Address {
 
     public void setRegion(String region) {
         String[] parts = region.trim().split(" ", 2);
-        this.region = capitalize(parts[0]) + " " + parts[1];
+        if (!parts[0].equalsIgnoreCase("АР")) this.region = capitalize(parts[0]) + " " + parts[1];
+        else this.region = parts[0].toUpperCase() + " " + capitalize(parts[1]);
     }
 
     public void setDistrict(String district) {
