@@ -1,9 +1,6 @@
 package controller;
 
-import model.Circle;
-import model.Rectangle;
-import model.Shape;
-import model.Triangle;
+import model.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import view.ShapeView;
@@ -32,9 +29,9 @@ public class ShapeControllerTest {
         }
 
         @Override
-        public void printShapes(Shape... shapes) {
+        public void printShapes(Drawable[] shapes) {
             this.printShapesCount++;
-            this.lastShapesPassed = shapes;
+            this.lastShapesPassed = (Shape[]) shapes;
         }
 
         @Override

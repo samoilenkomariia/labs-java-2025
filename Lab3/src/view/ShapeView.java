@@ -1,5 +1,5 @@
 package view;
-import model.Shape;
+import model.Drawable;
 
 public class ShapeView {
 
@@ -7,11 +7,11 @@ public class ShapeView {
         System.out.println(message);
     }
 
-    public void printShapes(Shape... shapes) {
+    public void printShapes(Drawable[] shapes) {
         if (shapes == null || shapes.length == 0) {
             return;
         }
-        for (Shape shape : shapes) {
+        for (var shape : shapes) {
             shape.draw();
         }
         System.out.println("_".repeat(80));
