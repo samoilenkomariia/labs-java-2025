@@ -6,8 +6,8 @@ public class Rectangle extends Shape {
     private final double height;
     public Rectangle(String color, double width, double height) {
         super(color);
-        this.width = width;
-        this.height = height;
+        this.width = Math.abs(width);
+        this.height = Math.abs(height);
     }
 
     @Override

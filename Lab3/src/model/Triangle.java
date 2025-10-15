@@ -7,9 +7,9 @@ public class Triangle extends Shape {
 
     public Triangle(String color, double a, double b, double c) {
         super(color);
-        this.a = a;
-        this.b = b;
-        this.c = c;
+        this.a = Math.abs(a);
+        this.b = Math.abs(b);
+        this.c = Math.abs(c);
     }
 
     @Override

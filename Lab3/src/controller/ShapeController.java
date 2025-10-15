@@ -54,7 +54,7 @@ public class ShapeController {
     public void sortByColor() {
         var copy = Arrays.copyOf(shapes, shapes.length);
         Arrays.sort(copy, Comparator.comparing(Shape::getShapeColor));
-        view.printMessage("Sorted by color");
+        view.printMessage("Sorted by Color");
         view.printShapes(copy);
     }
 
