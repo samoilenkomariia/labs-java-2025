@@ -59,20 +59,31 @@ public class ShapeController {
     }
 
     private Shape[] generateShapes(int count) {
+        enum ShapeType { RECTANGLE, TRIANGLE, CIRCLE };
+        ShapeType[] allShapeTypes = ShapeType.values();
         Shape[] result = new Shape[count];
         String[] colors = {"red", "blue", "green", "yellow", "black", "white"};
         Random random = new Random();
         for (int i = 0; i < count; i++) {
-            int shapeType = random.nextInt(3);
+            ShapeType shapeType = allShapeTypes[random.nextInt(allShapeTypes.length)];
             String color = colors[random.nextInt(colors.length)];
-            double dim1 = random.nextDouble() * 10 + random.nextDouble(10);
-            double dim2 = random.nextDouble() * 10 + random.nextDouble(10);
-            double dim3 = random.nextDouble() * 10 + random.nextDouble(10);
 
             switch (shapeType) {
-                case 0 -> result[i] = new Rectangle(color, dim1, dim2);
-                case 1 -> result[i] = new Triangle(color, dim1, dim2, dim3);
-                case 2 -> result[i] = new Circle(color, dim1);
+                case RECTANGLE -> {
+                    double dim1 = random.nextDouble() * 10 + random.nextDouble(10);
+                    double dim2 = random.nextDouble() * 10 + random.nextDouble(10);
+                    result[i] = new Rectangle(color, dim1, dim2);
+                }
+                case TRIANGLE -> {
+                    double dim1 = random.nextDouble() * 10 + random.nextDouble(10);
+                    double dim2 = random.nextDouble() * 10 + random.nextDouble(10);
+                    double dim3 = random.nextDouble() * 10 + random.nextDouble(10);
+                    result[i] = new Triangle(color, dim1, dim2, dim3);
+                }
+                case CIRCLE -> {
+                    double dim1 = random.nextDouble() * 10 + random.nextDouble(10);
+                    result[i] = new Circle(color, dim1);
+                }
             }
         }
         return result;
