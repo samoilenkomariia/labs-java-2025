@@ -70,7 +70,8 @@ public class ShapeControllerTest {
             new Triangle("blue", 3, 5, 6),
             new Triangle("red", 9, 5, 6),
     };
-    private ShapeController controller = new ShapeController(view, shapes);
+    private ShapeModel model = new ShapeModel(shapes);
+    private ShapeController controller = new ShapeController(view, model);
 
     @BeforeEach
     public void resetView() {
