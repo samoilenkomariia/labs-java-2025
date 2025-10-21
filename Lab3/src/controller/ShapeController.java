@@ -46,7 +46,7 @@ public class ShapeController {
 
     public void sortByArea() {
         var copy = Arrays.copyOf(shapes, shapes.length);
-        Arrays.sort(copy, Comparator.comparingDouble(Shape::calcArea).reversed());
+        Arrays.sort(copy, Comparator.comparingDouble(Shape::calcArea));
         view.printMessage("Sorted by Area");
         view.printShapes(copy);
     }

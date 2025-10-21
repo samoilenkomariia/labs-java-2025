@@ -149,7 +149,7 @@ public class ShapeControllerTest {
         assert view.lastMessagePassed.equals("Sorted by Area");
         assert view.printShapesCount == 1;
         var sorted = Arrays.copyOf(shapes, shapes.length);
-        Arrays.sort(sorted, Comparator.comparing(Shape::calcArea).reversed());
+        Arrays.sort(sorted, Comparator.comparing(Shape::calcArea));
         assert Arrays.equals(view.lastShapesPassed, sorted);
     }
 
