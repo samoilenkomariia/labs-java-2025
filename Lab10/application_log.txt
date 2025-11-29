@@ -1,0 +1,44 @@
+Nov 29, 2025 3:06:49 AM internationalization.Main main
+INFO: Application started
+Nov 29, 2025 3:06:55 AM internationalization.Main main
+FINE: User selected option: 6
+Nov 29, 2025 3:06:58 AM internationalization.Main changeLanguage
+INFO: Language changed to: uk
+Nov 29, 2025 3:07:01 AM internationalization.Main main
+FINE: User selected option: 0
+Nov 29, 2025 3:07:01 AM internationalization.Main main
+INFO: Application stopped by user
+Nov 29, 2025 3:09:54 AM internationalization.Main main
+INFO: Application started
+Nov 29, 2025 3:09:57 AM internationalization.Main main
+FINE: User selected option: 0
+Nov 29, 2025 3:09:57 AM internationalization.Main main
+INFO: Application stopped by user
+Nov 29, 2025 3:10:11 AM internationalization.Main main
+INFO: Application started
+Nov 29, 2025 3:10:14 AM internationalization.Main main
+FINE: User selected option: 6
+Nov 29, 2025 3:10:16 AM internationalization.Main changeLanguage
+INFO: Language changed to: uk
+Nov 29, 2025 3:10:19 AM internationalization.Main main
+FINE: User selected option: hmmmmmm
+Nov 29, 2025 3:10:19 AM internationalization.Main main
+WARNING: User entered invalid menu choice: hmmmmmm
+Nov 29, 2025 3:10:25 AM internationalization.Main main
+FINE: User selected option: 0
+Nov 29, 2025 3:10:25 AM internationalization.Main main
+INFO: Application stopped by user
+Nov 29, 2025 3:10:42 AM internationalization.Main main
+INFO: Application started
+Nov 29, 2025 3:10:44 AM internationalization.Main main
+FINE: User selected option: 6
+Nov 29, 2025 3:10:46 AM internationalization.Main changeLanguage
+INFO: Language changed to: uk
+Nov 29, 2025 3:10:49 AM internationalization.Main main
+FINE: User selected option: 6
+Nov 29, 2025 3:10:50 AM internationalization.Main changeLanguage
+INFO: Language changed to: en
+Nov 29, 2025 3:10:52 AM internationalization.Main main
+FINE: User selected option: 0
+Nov 29, 2025 3:10:52 AM internationalization.Main main
+INFO: Application stopped by user
